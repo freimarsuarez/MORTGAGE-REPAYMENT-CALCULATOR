@@ -3,17 +3,17 @@ interface Props {
     label: string;
     unit: string;
     position?: 'right' | 'left';
-
 }
 
-export const Input = ({ styles = '', label, unit, position = 'right' }: Props) => {
+export const Input = ({ styles = '', label, unit, position = 'right', ...props }: Props) => {
     return (
-        <div className={`${styles}`}>
+        <div className={`${styles} md:w-full`}>
 
             <label className="block mb-3 text-slate-700" htmlFor={label}>{label}</label>
 
             <div className="relative">
                 <input
+                    {...props}
                     name=""
                     id={label}
                     type="number"
