@@ -9,8 +9,8 @@ export const Radio = ({ label, ...props }: Props) => {
                 <input
                     {...props}
                     id={label}
+                    value={label}
                     type="radio"
-                    name="Mortgage Type"
                     className="appearance-none size-5 border checked:border-Lime rounded-full peer"
                 />
                 <span className=" absolute rounded-full size-3 bg-Lime opacity-0 peer-checked:opacity-100"></span>
